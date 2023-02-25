@@ -15,7 +15,8 @@ To use the Payment Security Tool, run the main.py script with the transaction da
 
 ```
 python main.py transactions.csv
-The tool will output a new CSV file with columns for transaction ID, user ID, transaction amount, transaction time, and a flag indicating whether the transaction is potentially fraudulent.
 ```
+
+The tool will output a new CSV file with columns for transaction ID, user ID, transaction amount, transaction time, and a flag indicating whether the transaction is potentially fraudulent.
 License
 This tool is licensed under the MIT License. See the LICENSE file for more information.
