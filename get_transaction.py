@@ -16,5 +16,22 @@ for id in ids:
     responses.append(response.json())
 
 # Combine the responses into a single dataframe
+
+# create a DataFrame from the data
+# df = pd.DataFrame(responses[0]['data']['customer'])
+# print([responses[0]['data']['customer']])
+
+data_d = {}
+data_d = responses[0]['data']['customer']
+data_d.update(responses[0]['data']['transaction'])
+
+# create the DataFrame
+df = pd.DataFrame([data_d])
+
+for i in range(len(responses)):
+    data_d = {}
+    data_d = responses[i]['data']['customer']
+    data_d.update(responses[i]['data']['transaction'])
+    df.loc[len(df.index)] = data_d
 # df = pd.concat([pd.DataFrame(r) for r in responses], ignore_index=True)
-# print(df)
+print(df.columns)
