@@ -21,5 +21,5 @@ cd dashboard
 npm start
 ```
 
-License
+#### License
 This tool is licensed under the MIT License. See the LICENSE file for more information.
